@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Docs\Strategies\Responses;
 
 use Knuckles\Camel\Extraction\ExtractedEndpointData;
@@ -13,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class OkFileTag extends Strategy
 {
-    public function __invoke(ExtractedEndpointData $endpointData, array $routeRules): ?array
+    public function __invoke(ExtractedEndpointData $endpointData, array $routeRules=[]): ?array
     {
         $docBlocks = RouteDocBlocker::getDocBlocksFromRoute($endpointData->route);
         $methodDocBlock = $docBlocks['method'];
