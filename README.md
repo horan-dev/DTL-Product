@@ -22,13 +22,13 @@
 Clone the project
 
 ```bash
-  git clone {repository link} laravel-boilerplate
+  git clone {repository link} app-name
 ```
 
 Go to the project directory
 
 ```bash
-  cd laravel-boilerplate
+  cd app-name
 ```
 
 Checkout `main` branch
@@ -37,11 +37,7 @@ Checkout `main` branch
   git checkout main
 ```
 
-Remove `.git` directory to remove the boilerplate git data which allows you to start your new git repository.
 
-```bash
-    sudo rm -r .git
-```
 
 Install dependencies
 
@@ -64,6 +60,24 @@ Generate application key
 ```bash
   php artisan key:generate 
 ```
+Generate passport
+
+```bash
+  php artisan passport:install
+```
+
+create DB and seed
+
+```bash
+  php artisan migrate --seed
+```
+
+Generate scripe api docs
+
+```bash
+  php artisan scribe:generate
+```
+and open {URL}/docs
 ## Run with Laravel Sail
 
 If you are new to docker, it is not a problem because using [**Laravel Sail**](https://laravel.com/docs/9.x/sail#introduction) we don't have to go deeply into docker.
@@ -137,7 +151,6 @@ Development only packages:
 - [Grum PHP](https://github.com/phpro/grumphp)
 - [Security Advisor](https://github.com/Roave/SecurityAdvisories)
 
-**Note:** please read the packages documentation before you continue reading.
 # Features
 
 - [DDD (domain driven design)](#ddd)
@@ -344,65 +357,10 @@ All you need to do is fill up these enums, and their data will be automatically 
 By default we are seeding the permissions and roles for the `api` and the `web` guards, if you need to update them you can do that in the `permission.seeded_guards` config
 # Recommendations
 
-- [Aliases](#aliases)
 - [VS Code extensions](#vs-code-extensions)
 - [General Resources](#general-resources)
 - [Sail Xdebug Configurations](#sail-xdebug-configurations-on-vs-code)
-## Aliases
 
-You can add these aliases to your `.bashrc` file and start using them to increase your productivity. you are free to add, update, and delete any of them as you need.
-
-```bash
-alias h='cd ~'
-alias c='clear'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias repos='cd ~/your_repository_dir'
-
-alias ci='composer install'
-alias co='composer'
-
-#sail related commands
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-alias sailu='sail up -d'
-alias saild='sail down'
-
-#php artisan commands
-alias pa="php artisan"
-alias pseed='pa db:seed'
-alias pfresh='pa migrate:fresh'
-alias ppassport='pa passport:install'
-alias pide='pa ide-helper:generate ; pa ide-helper:meta ; echo "no" | pa ide-helper:models'
-alias pt='pa test'
-
-#sail artisan commands
-alias sa="sail artisan"
-alias sseed='sa db:seed'
-alias sfresh='sa migrate:fresh'
-alias spassport='sa passport:install'
-alias said='fresh ; seed ; passport'
-alias side='sa ide-helper:generate ; sa ide-helper:meta ; echo "no" | sa ide-helper:models'
-alias st='sail test'
-
-#testing using pest commands
-alias p='./vendor/bin/pest'
-alias pp='./vendor/bin/pest -p'
-alias pc='./vendor/bin/pest --coverage'
-alias pf='./vendor/bin/pest --filter'
-
-alias pint='./vendor/bin/pint'
-
-#proxy manager commands
-alias pmu='cd ~/proxy-manager ; docker-compose up -d'
-alias pmd='cd ~/proxy-manager ; docker-compose down'
-
-#basic git commands
-alias gits='git status'
-alias gitpl='git pull'
-alias gitps='git push'
-alias gitf='git fetch'
-alias gitl='git log'
-```
 ## VS Code extensions
 
 In the root directory you will find `vsc-extensions.txt` file, which contains the recommended set of extensions to install for developing Laravel projects. to install them, you need to install this [extension](https://marketplace.visualstudio.com/items?itemName=aslamanver.vsc-export) first and then execute the `VSC Extensions Import` command.
@@ -505,9 +463,4 @@ If you want to use Xdebug on Laravel Sail you can use the following settings in 
 }
 ```
 
-# Feedback
 
-We will be happy to hear your feedback! If you have any recommendation or suggestion, please send an e-mail to [Mail](mailto:code@dentatic.com).
-# License
-
-The Laravel boilerplate is closed-source software owned by [Dentatic](https://dentatic.com)  and only licensed for use by its projects.
