@@ -1,0 +1,20 @@
+{
+    "message": "Operation succeeded.",
+    "data": {
+        "status": "active",
+        "name": "ProductA",
+        "admin_id": 1,
+        "product_type": "service",
+        "updated_at": "2023-03-26T19:47:27.000000Z",
+        "created_at": "2023-03-26T19:47:27.000000Z",
+        "id": 9,
+        "created_by": {
+            "id": 1,
+            "name": "Admin",
+            "email": "admin@test.com",
+            "email_verified_at": "2023-03-26T19:01:40.000000Z",
+            "created_at": "2023-03-26T19:01:40.000000Z",
+            "updated_at": "2023-03-26T19:01:40.000000Z"
+        }
+    }
+}

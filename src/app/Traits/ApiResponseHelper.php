@@ -26,6 +26,18 @@ trait ApiResponseHelper
         );
     }
 
+    public function createdResponse(
+        mixed $data = null,
+        ?string $message = null,
+        array $headers = []
+    ): JsonResponse {
+        return $this->apiResponse(
+            ['message' => $message ?? 'Created succeesfully.', 'data' => $this->morphToArray($data)],
+            Response::HTTP_CREATED,
+            $headers
+        );
+    }
+
     public function failedResponse(
         ?string $message = null,
         array $headers = []

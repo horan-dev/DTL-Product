@@ -9,6 +9,16 @@ trait EnumHelper
      *
      * @return array
      */
+    public static function getValuesAsInRule(): string
+    {
+        return 'in:' . implode(",", static::getValues());
+    }
+
+    /**
+     * return array of enum values
+     *
+     * @return array
+     */
     public static function getValues(): array
     {
         return array_column(static::cases(), 'value');

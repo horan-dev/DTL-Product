@@ -16,7 +16,7 @@ class LoginController extends APIController
     * @unauthenticated
     * @bodyParam email string required The email of the user. Example: admin@test.com
     * @bodyParam password string The password of the user. Example: password
-    * @responseFile 200 responses/login.json
+    * @responseFile 200 responses/Client/login.json
     * @response status=404 scenario="user not found" {"message": "User not found"}
     */
     public function login(LoginRequest $request): JsonResponse

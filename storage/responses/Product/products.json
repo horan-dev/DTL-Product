@@ -1,0 +1,40 @@
+{
+    "message": "Operation succeeded.",
+    "data": [{
+            "id": 2,
+            "name": "ProductA",
+            "status": "active",
+            "admin_id": 1,
+            "product_type": "service",
+            "created_at": "2023-03-26T19:19:02.000000Z",
+            "updated_at": "2023-03-26T19:19:02.000000Z",
+            "deleted_at": null,
+            "created_by": {
+                "id": 1,
+                "name": "Admin",
+                "email": "admin@test.com",
+                "email_verified_at": "2023-03-26T19:01:40.000000Z",
+                "created_at": "2023-03-26T19:01:40.000000Z",
+                "updated_at": "2023-03-26T19:01:40.000000Z"
+            }
+        },
+        {
+            "id": 3,
+            "name": "ProductA",
+            "status": "active",
+            "admin_id": 1,
+            "product_type": "service",
+            "created_at": "2023-03-26T19:19:28.000000Z",
+            "updated_at": "2023-03-26T19:19:28.000000Z",
+            "deleted_at": null,
+            "created_by": {
+                "id": 1,
+                "name": "Admin",
+                "email": "admin@test.com",
+                "email_verified_at": "2023-03-26T19:01:40.000000Z",
+                "created_at": "2023-03-26T19:01:40.000000Z",
+                "updated_at": "2023-03-26T19:01:40.000000Z"
+            }
+        }
+    ]
+}
