@@ -5,6 +5,7 @@ namespace Domain\Product\Models;
 use Domain\Client\Models\User;
 use Spatie\ModelStates\HasStates;
 use Illuminate\Database\Eloquent\Model;
+use Domain\Product\Observers\ProductObserver;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Database\Factories\Product\ProductFactory;
 use Domain\Product\States\Product\ProductState;
@@ -53,6 +54,13 @@ class Product extends Model
     {
         return ProductFactory::new();
     }
+
+    public static function boot()
+    {
+        parent::boot();
+        self::observe(ProductObserver::class);
+    }
+
 
 
 }
