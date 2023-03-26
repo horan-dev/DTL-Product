@@ -4,13 +4,14 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use Database\Seeders\Client\PermissionSeeder;
-use Database\Seeders\Client\UserSeeder;
-use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\SQLiteConnection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Database\Seeders\Client\UserSeeder;
+use Illuminate\Database\SQLiteConnection;
+use Database\Seeders\Product\ProductSeeder;
+use Illuminate\Database\PostgresConnection;
+use Database\Seeders\Client\PermissionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,7 +25,8 @@ class DatabaseSeeder extends Seeder
         // Add your production seeders in the following function.
         $this->call([
             UserSeeder::class,
-            PermissionSeeder::class
+            // PermissionSeeder::class,
+            ProductSeeder::class
         ]);
 
         // This code is related to the TestingSeeder execution.
