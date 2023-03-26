@@ -11,12 +11,7 @@ use Shared\Bases\BaseFactory;
  */
 class UserFactory extends BaseFactory
 {
-
     protected $model = User::class;
-
-    private array $fields = [
-        'category_id' => 
-    ];
 
     public function fields(): array
     {
