@@ -14,7 +14,8 @@
         "lorisleiva/laravel-actions": "^2.4",
         "spatie/laravel-data": "^2.2",
         "spatie/laravel-model-states": "^2.4",
-        "spatie/laravel-permission": "^5.8"
+        "spatie/laravel-permission": "^5.8",
+        "spatie/laravel-query-builder": "^5.2"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
