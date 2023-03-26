@@ -2,9 +2,10 @@
 
 namespace Database\Seeders\Client;
 
-use Database\Factories\Client\UserFactory;
+use Domain\Client\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Hash;
+use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
@@ -15,10 +16,16 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // The "truncate" function is called so you do not have to refresh
-        // the database if you just want to update the seeded data.
-        DB::table('users')->truncate();
 
-        UserFactory::new()->create();
+        //create if not found by email check
+        User::firstOrCreate([
+            'email' => config('default.admin.email'),
+        ], [
+            'name' => 'Admin',
+            'email_verified_at' => now(),
+            'password' => Hash::make(config('default.admin.password')),
+            'remember_token' => Str::random(10),
+        ]);
     }
+
 }

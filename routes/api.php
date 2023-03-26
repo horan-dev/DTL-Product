@@ -17,13 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/healthcheck', function () {
-    return [
-        'status' => 'up',
-        'services' => [
-            'database' => 'up',
-            'redis' => 'up',
-        ],
-    ];
-});
