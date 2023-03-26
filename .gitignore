@@ -5,6 +5,7 @@
 /storage/*.key
 /vendor
 /vendor/*
+/zzz_extra
 .env
 .env.backup
 .env.production
