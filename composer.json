@@ -12,6 +12,7 @@
         "laravel/passport": "^11.5",
         "laravel/tinker": "^2.7",
         "lorisleiva/laravel-actions": "^2.4",
+        "spatie/laravel-activitylog": "^4.7",
         "spatie/laravel-data": "^2.2",
         "spatie/laravel-model-states": "^2.4",
         "spatie/laravel-permission": "^5.8",
