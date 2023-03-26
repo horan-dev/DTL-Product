@@ -7,11 +7,7 @@
 <br />
 
 
-<h3 align="center"><a href="https://dentatic.com" target="_blank">Dentatic</a> Laravel boilerplate</h3>
 
-  <p align="center">
-  Modified <a href="https://laravel.com" target="_blank">Laravel</a> application with DDD structure and additional packages installed and configured, to help you start building your next big application.
-</p>
 
 # Requirements
 
